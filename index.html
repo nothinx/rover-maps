@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROVER-MAPS - Solar Survey Revolution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #374151;
+        }
+.hero-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+        }
+        .step-number {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3B82F6 0%, #10B981 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .animated-underline {
+            position: relative;
+        }
+        .animated-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(90deg, #3B82F6 0%, #10B981 100%);
+            transition: width 0.3s;
+        }
+        .animated-underline:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="font-bold text-2xl gradient-text">ROVER-MAPS</span>
+</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#problem" class="text-zinc-600 hover:text-orange-500 transition">Problem</a>
+                <a href="#solution" class="text-zinc-600 hover:text-orange-500 transition">Solution</a>
+                <a href="#features" class="text-zinc-600 hover:text-orange-500 transition">Features</a>
+                <a href="#how-it-works" class="text-zinc-600 hover:text-orange-500 transition">How It Works</a>
+                <a href="#team" class="text-zinc-600 hover:text-orange-500 transition">Team</a>
+                <a href="#contact" class="text-zinc-600 hover:text-orange-500 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500/10 to-green-500/10"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://static.photos/abstract/1200x630/5')] opacity-10"></div>
+        </div>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white">Revolusi Survei Energi Surya dengan ROVER-MAPS</h1>
+<p class="text-2xl md:text-3xl mb-10 font-medium">Otomatisasi Survei Panel Surya: Lebih Cepat, Akurat, dan Aman dengan Robotika & IoT</p>
+<div class="flex space-x-4">
+                    <a href="#solution" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold inline-block hover:bg-gray-100 transition duration-300 hover:shadow-lg hover:-translate-y-1">Pelajari Lebih Lanjut</a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold inline-block hover:bg-white hover:text-blue-600 transition duration-300 hover:shadow-lg hover:-translate-y-1">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://huggingface.co/spaces/udelzzzs/solar-rover-revolution/resolve/main/images/robot-removebg-preview.png" alt="ROVER-MAPS Robot" class="rounded-lg shadow-2xl max-w-full h-auto floating transform transition duration-1000 hover:scale-105">
+            </div>
+</div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-20 bg-zinc-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Metode Lama Menghambat Potensi Energi Surya Indonesia</h2>
+<div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-orange-500 mb-4">
+                        <i data-feather="clock" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                <h3 class="text-2xl font-bold mb-4 text-blue-600">Proses Lambat</h3>
+                <p class="text-lg text-gray-700">Survei manual membutuhkan waktu berhari-hari bahkan berminggu-minggu untuk area yang luas.</p>
+</div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-orange-500 mb-4">
+                        <i data-feather="alert-circle" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                <h3 class="text-2xl font-bold mb-4 text-blue-600">Data Tidak Akurat</h3>
+                <p class="text-lg text-gray-700">Estimasi produksi energi bisa meleset hingga 20% karena keterbatasan metode konvensional.</p>
+</div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-orange-500 mb-4">
+                        <i data-feather="alert-triangle" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                <h3 class="text-2xl font-bold mb-4 text-blue-600">Risiko Keselamatan</h3>
+                <p class="text-lg text-gray-700">Surveyor menghadapi bahaya saat bekerja di lokasi sulit seperti atap tinggi atau medan terjal.</p>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-4xl font-bold mb-8">ROVER-MAPS: Data Ganda untuk Keputusan Optimal</h2>
+                    <p class="text-gray-700 mb-10 text-xl leading-relaxed">Kami mengintegrasikan teknologi pemetaan visual melalui Telegram dengan pengumpulan data lingkungan real-time melalui protokol MQTT, memberikan Anda informasi komprehensif untuk analisis yang lebih akurat.</p>
+<ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-orange-500 mr-3 mt-1"></i>
+                            <span>Pemetaan area dalam hitungan menit</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-orange-500 mr-3 mt-1"></i>
+                            <span>Data suhu, kelembapan, dan intensitas cahaya real-time</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-orange-500 mr-3 mt-1"></i>
+                            <span>Notifikasi langsung ke Telegram Anda</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://huggingface.co/spaces/udelzzzs/solar-rover-revolution/resolve/main/images/sensor-removebg-preview.png" alt="Sensor Box" class="rounded-lg shadow-lg w-full max-w-md">
+                        <div class="absolute -bottom-10 -right-10 bg-white rounded-lg shadow-xl border-4 border-white w-64 overflow-hidden">
+                            <div class="bg-gray-800 p-2 text-white text-center font-bold">
+                                IoT Dashboard
+                            </div>
+                            <div class="p-3 bg-gray-100">
+                                <img src="https://huggingface.co/spaces/udelzzzs/solar-rover-revolution/resolve/main/images/Gemini_Generated_Image_ftu29bftu29bftu2.png" alt="IoT Dashboard" class="rounded">
+                            </div>
+                            <div class="bg-gray-100 p-2 text-xs text-gray-600 text-center">
+                                Realtime Data Monitoring
+                            </div>
+                        </div>
+                    </div>
+</div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Keunggulan Teknologi Kami</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-500 hover:border-2 hover:border-blue-500/20">
+<div class="text-orange-500 mb-4">
+                        <i data-feather="map" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Pemetaan Real-time</h3>
+                    <p class="text-gray-700 text-lg">Dapatkan visualisasi area survei langsung melalui Telegram dengan resolusi tinggi.</p>
+</div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="text-orange-500 mb-4">
+                        <i data-feather="thermometer" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Sensor Lingkungan</h3>
+                    <p class="text-zinc-600">Sensor presisi mengukur suhu, kelembapan dan intensitas cahaya dengan akurasi ±1%.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="text-orange-500 mb-4">
+                        <i data-feather="bar-chart-2" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Analisis Data</h3>
+                    <p class="text-zinc-600">Sistem kami memberikan rekomendasi optimalisasi berdasarkan data yang dikumpulkan.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="text-orange-500 mb-4">
+                        <i data-feather="zap" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Operasi Cepat</h3>
+                    <p class="text-zinc-600">Survey area 1 hektar hanya dalam 2 jam, 5x lebih cepat dari metode manual.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="text-orange-500 mb-4">
+                        <i data-feather="shield" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Keselamatan Kerja</h3>
+                    <p class="text-zinc-600">Minimalkan risiko kecelakaan dengan mengurangi kebutuhan manusia di lokasi berbahaya.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="text-orange-500 mb-4">
+                        <i data-feather="expand" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Skalabilitas</h3>
+                    <p class="text-zinc-600">Dirancang untuk area dari 0.5 hingga 100+ hektar dengan akurasi konsisten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Proses Survei dalam 4 Langkah Sederhana</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center transform transition hover:scale-105">
+                    <div class="step-number bg-gradient-to-br from-blue-500 to-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
+<h3 class="font-semibold mb-2">Deployment Robot</h3>
+                    <p class="text-zinc-600 text-sm">Robot dikirim ke lokasi survei dengan setup minimal</p>
+                </div>
+                <div class="text-center transform transition hover:scale-105">
+                    <div class="step-number bg-gradient-to-br from-blue-500 to-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
+                    <h3 class="font-semibold mb-2">Pemetaan & Sensing</h3>
+                    <p class="text-zinc-600 text-sm">Robot mengumpulkan data visual dan parameter lingkungan</p>
+                </div>
+                <div class="text-center transform transition hover:scale-105">
+                    <div class="step-number bg-gradient-to-br from-blue-500 to-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
+                    <h3 class="font-semibold mb-2">Transmisi Data</h3>
+                    <p class="text-zinc-600 text-sm">Data dikirim via Telegram dan MQTT ke sistem cloud</p>
+                </div>
+                <div class="text-center transform transition hover:scale-105">
+                    <div class="step-number bg-gradient-to-br from-blue-500 to-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">4</div>
+                    <h3 class="font-semibold mb-2">Analisis & Laporan</h3>
+                    <p class="text-zinc-600 text-sm">Sistem menghasilkan laporan dan rekomendasi instalasi</p>
+                </div>
+</div>
+        </div>
+    </section>
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Tim Inovator di Balik ROVER-MAPS</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                    <div class="relative inline-block mb-4">
+                        <img src="http://static.photos/people/200x200/1" alt="Amadeo Wisesa" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white glow">
+                        <div class="absolute -bottom-2 -right-2 bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                            <i data-feather="sun" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1 gradient-text">Amadeo Wisesa</h3>
+<p class="text-zinc-600 font-medium">Energy Analyst</p>
+                    <p class="text-zinc-500 text-sm mt-3">Spesialis analisis potensi energi surya dengan pengalaman 5+ tahun di industri renewable energy.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                    <div class="relative inline-block mb-4">
+                        <img src="http://static.photos/people/200x200/2" alt="Rayhan Roja" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white glow">
+                        <div class="absolute -bottom-2 -right-2 bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                            <i data-feather="cpu" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1 gradient-text">Rayhan Roja</h3>
+                    <p class="text-zinc-600 font-medium">Electrical Engineer</p>
+                    <p class="text-zinc-500 text-sm mt-3">Ahli sistem kelistrikan dan integrasi sensor dengan fokus pada solusi IoT untuk energi terbarukan.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                    <div class="relative inline-block mb-4">
+                        <img src="http://static.photos/people/200x200/3" alt="Moses Jaguar" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white glow">
+                        <div class="absolute -bottom-2 -right-2 bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                            <i data-feather="code" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1 gradient-text">Moses Jaguar</h3>
+                    <p class="text-zinc-600 font-medium">Software Developer</p>
+                    <p class="text-zinc-500 text-sm mt-3">Pengembang sistem komunikasi MQTT dan integrasi platform dengan keahlian dalam robotika.</p>
+                </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-16">Hubungi Kami</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-zinc-700 mb-1">Nama</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-zinc-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-zinc-700 mb-1">Pesan</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition"></textarea>
+                            </div>
+                            <button type="submit" class="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition w-full">Kirim Pesan</button>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="bg-zinc-50 p-8 rounded-xl h-full">
+                            <h3 class="text-xl font-semibold mb-6">Informasi Kontak</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i data-feather="mail" class="text-orange-500 mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="font-medium">Email</p>
+                                        <p class="text-zinc-600">612023026@student.uksw.edu</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-feather="phone" class="text-orange-500 mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="font-medium">WhatsApp</p>
+                                        <p class="text-zinc-600">085155288060 (DEO)</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-feather="map-pin" class="text-orange-500 mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="font-medium">Lokasi</p>
+                                        <p class="text-zinc-600">Universitas Kristen Satya Wacana, Salatiga</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="font-bold text-2xl gradient-text">ROVER-MAPS</span>
+<p class="mt-2 text-zinc-400">Revolusi Survei Energi Surya dengan Teknologi Robotika & IoT</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-zinc-400 hover:text-orange-500 transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" class="text-zinc-400 hover:text-orange-500 transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="text-zinc-400 hover:text-orange-500 transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="text-zinc-400 hover:text-orange-500 transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-zinc-700 mt-8 pt-8 text-center text-zinc-400">
+                <p>&copy; 2023 ROVER-MAPS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        feather.replace();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll Reveal Animation
+        ScrollReveal().reveal('.feature-card', { 
+            delay: 200,
+            distance: '20px',
+            origin: 'bottom',
+            interval: 100
+        });
+
+        ScrollReveal().reveal('.step-number', { 
+            delay: 300,
+            rotate: { x: 20 },
+            scale: 0.5,
+            interval: 100
+        });
+
+        // Add animated underline to navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            link.classList.add('animated-underline');
+        });
+    </script>
+</body>
+</html>
